@@ -1,5 +1,5 @@
 """
-Helper file to p3_euler.py
+Helper file to p003.py
 """
 
 
