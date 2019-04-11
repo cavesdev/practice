@@ -1,12 +1,15 @@
 """
 Problem 2 from Project Euler
 
-Carlos Cuevas Sosa 09-04-19
+    By considering the terms in the Fibonacci sequence whose values do not exceed four million,
+    find the sum of the even-valued terms.
+
+Carlos Cuevas
+09-04-19
 """
 
 value_1 = 1
 value_2 = 2
-new_value = 0
 sum = 0
 target = 4000000
 
@@ -20,5 +23,5 @@ while True:
     value_2 = new_value
 sum += 2
 
-print(sum)
+print('The sum is : ' + str(sum))
 

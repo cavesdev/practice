@@ -1,15 +1,20 @@
-# class used to create binary tree nodes
+"""
+Helper file to p3_euler.py
+"""
+
 
 class Node():
+    """Class used to create binary tree nodes"""
 
     factors = []
+
     # initialization
     def __init__(self, data, left=None, right=None):
         self.data = data
         self.left = left
         self.right = right
 
-    def getData(self):
+    def get_data(self):
         """Return data from tree node"""
         return self.data
 
