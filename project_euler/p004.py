@@ -21,14 +21,6 @@ def divide_in_digits(number):
 
     return digits
 
-def divide_list(digits):
-    """Divides a list in two sublists: one with original left half and the other one inverted"""
-    left = digits[:len(digits) // 2]
-    right = digits[ceil(len(digits) // 2):]
-    right.reverse()
-
-    return (left, right)
-
 def compare_lists(first, second):
     """Compares two lists object by object"""
     for i in range(0, len(first)):
@@ -43,13 +35,9 @@ def compare_lists(first, second):
 for i in range(100, 1000):
     for j in range(100, 1000):
         digits = divide_in_digits(i * j)
-        # skip if length is not even
-        if len(digits) % 2 != 0:
-            continue
-            print("not equal!")
-        digits = divide_list(digits)
-        #print(digits)
-        if compare_lists(digits[0], digits[1]) is True:
-            answer = i * j
+        # reverse list
+        digits_inv = digits[::-1]
+        if compare_lists(digits, digits_inv) is True:
+            answer = [i, j, i * j]
 
 print(answer)
